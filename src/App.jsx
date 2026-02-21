@@ -1,31 +1,28 @@
 import { useState } from 'react'
 import './App.css'
 
+// Drop your images into src/assets/carousel/ and import them here.
+// Example:
+//   import photo1 from './assets/carousel/photo1.jpg'
+//   import photo2 from './assets/carousel/photo2.jpg'
+//
+// Then add them to the slides array below:
+//   { id: 1, url: photo1, alt: 'Description' },
+
 const slides = [
-  {
-    id: 1,
-    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80',
-    alt: 'Mountain landscape',
-  },
-  {
-    id: 2,
-    url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80',
-    alt: 'Sunlit forest',
-  },
-  {
-    id: 3,
-    url: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80',
-    alt: 'Ocean at sunset',
-  },
-  {
-    id: 4,
-    url: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80',
-    alt: 'Rolling green hills',
-  },
+  // Add your slides here once you've uploaded images to src/assets/carousel/
 ]
 
 function Carousel() {
   const [current, setCurrent] = useState(0)
+
+  if (slides.length === 0) {
+    return (
+      <div className="carousel carousel--empty">
+        <p>Upload images to <code>src/assets/carousel/</code> to get started.</p>
+      </div>
+    )
+  }
 
   const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length)
   const next = () => setCurrent((c) => (c + 1) % slides.length)
@@ -73,8 +70,7 @@ function App() {
 
       <main>
         <section className="hero">
-          <h1 className="hero-title">Allen and Jenny, Can You Make That Happen?</h1>
-          <p className="hero-sub">Lee Mills Group &mdash; Where vision meets execution.</p>
+          <h1 className="hero-title">Allen and Jenny</h1>
         </section>
 
         <section className="carousel-section">
