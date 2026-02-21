@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 
-// Drop your images into src/assets/carousel/ and import them here.
-// Example:
-//   import photo1 from './assets/carousel/photo1.jpg'
-//   import photo2 from './assets/carousel/photo2.jpg'
-//
-// Then add them to the slides array below:
-//   { id: 1, url: photo1, alt: 'Description' },
+import photo1 from './assets/carousel/9EE90625-767C-472D-9D80-AB1E62F38CAC_1_105_c.jpeg'
+import photo2 from './assets/carousel/A49D0905-EC72-4CE9-8F47-9BF7E0A2AF68_4_5005_c.jpeg'
+import photo3 from './assets/carousel/B25E8B72-C35E-4D8E-9267-BC40D6723B48_4_5005_c.jpeg'
+import photo4 from './assets/carousel/CA03390A-AD6A-4ADA-9F44-D9F878CE87BC_4_5005_c.jpeg'
 
 const slides = [
-  // Add your slides here once you've uploaded images to src/assets/carousel/
+  { id: 1, url: photo1, alt: 'Photo 1' },
+  { id: 2, url: photo2, alt: 'Photo 2' },
+  { id: 3, url: photo3, alt: 'Photo 3' },
+  { id: 4, url: photo4, alt: 'Photo 4' },
 ]
 
 function Carousel() {
